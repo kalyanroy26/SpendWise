@@ -1,0 +1,180 @@
+@media screen and (max-width: 700px) {
+  body {
+    overflow: hidden;
+  }
+
+  .container {
+    position: static;
+    border-radius: 0;
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+  }
+
+  .logo-icon img {
+    height: 50px;
+  }
+
+  .logo span {
+    font-size: 2rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+  }
+
+  .card {
+    width: 98%;
+  }
+
+  .line-divider {
+    width: 96%;
+  }
+
+  /* balance box */
+
+  .balance-box {
+    flex-wrap: wrap;
+  }
+
+  .dc {
+    width: 150px;
+  }
+
+  .ic-3 {
+    margin-top: 15px;
+  }
+
+  /* analytics card 2 */
+  .analytics-card {
+    width: 96%;
+    position: static;
+    margin: 10px 0;
+    height: 390px;
+    padding-top: 10px;
+    row-gap: 10px;
+  }
+
+  .analytics-card:hover {
+    transform: scale(1);
+  }
+
+  .analytics-title,
+  .donut-graph,
+  .graph-values {
+    position: static;
+  }
+
+  .donut-graph {
+    height: 68%;
+  }
+
+  .graph-values {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .blue {
+    margin-top: 5px;
+  }
+
+  .card-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .card-2-title {
+    position: relative;
+    left: 0;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 10px;
+  }
+
+  .form-control {
+    margin: 10px;
+  }
+
+  .btn {
+    position: static;
+    margin-top: 30px;
+  }
+  .card-3{
+    padding: 10px 0;
+  }
+
+  .filter-type {
+    justify-content: center;
+    padding: 0;
+    column-gap: 0;
+    border-radius: 2rem;
+    margin: 0;
+  }
+
+  .filter-btn{
+    border-radius: 2rem;
+  }
+
+  .transaction-item{
+    padding: 0;
+    column-gap: 10px;
+  }
+
+  .transaction-item img {
+    height: 38px;
+  }
+
+  .transaction-item .delete-icon{
+    height: 28px;
+  }
+
+  .transaction-description {
+    padding-left: 0;
+  }
+
+  .transaction-name {
+    font-size: 18px;
+  }
+
+  .transaction-category {
+    font-size: 21px;
+  }
+
+  .income .transaction-amount {
+    font-size: 20px;
+    padding: 0 10px;
+    width: unset;
+  }
+  .expense .transaction-amount {
+    font-size: 20px;
+    padding: 0 10px;
+    width: unset;
+  }
+  .investment .transaction-amount {
+    font-size: 20px;
+    padding: 0 10px;
+    width: unset;
+  }
+
+  .amount-date-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .current-transaction-date{
+    font-size: 12px;
+  }
+
+  .box{
+    width: unset;
+  }
+
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="icon" href="./images/money.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- nav bar -->
+        <div class="nav-container">
+            <div class="logo-icon">
+                <img src="./images/financial-freedom-unscreen.gif" alt="SpendWise" height="65">
+            </div>
+            <div class="logo">
+                <span>SpendWise</span>
+            </div>
+        </div>
+
+        <!-- main containers -->
+        <div class="main-container">
+            <div class="card card-1">
+
+                <!-- balance card -->
+                <div class="current-balance-card">
+                    <p>Your Balance: <span class="current-balance">₹ 0</span></p>
+                </div>
+
+                <!-- balance box expense,investment -->
+                <div class="balance-box">
+                    <!-- income box -->
+                    <div class="income-card ic-1 dc">
+                        <div class="income-icon ic">
+                            <img src="./images/income.png" alt="income" height="32">
+                        </div>
+                        <div class="income-text">
+                            <p>Income</p>
+                            <div class="total-income value">₹ 0</div>
+                        </div>
+                    </div>
+                    <!-- expense box -->
+                    <div class="income-card ic-2 dc">
+                        <div class="expense-icon ic">
+                            <img src="./images/expense.png" alt="expense" height="32">
+                        </div>
+                        <div class="income-text">
+                            <p>Expense</p>
+                            <div class="total-expense value">₹ 0</div>
+                        </div>
+                    </div>
+                    <!-- investment box -->
+                    <div class="income-card ic-3 dc">
+                        <div class="stock-icon ic">
+                            <img src="./images/Investment.png" alt="Investment" height="32">
+                        </div>
+                        <div class="income-text">
+                            <p>Investment</p>
+                            <div class="total-investments value">₹ 0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+
+                <div class="analytics-card">
+                    <div class="analytics-title">
+                        <p>SpendWise Analysis</p>
+                    </div>
+                    <div class="donut-graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="graph-values">
+                        <div class="green color">
+                            <div class="income-graph-shade"></div>
+                            <p>Income</p>
+                        </div>
+
+                        <div class="red color">
+                            <div class="expense-graph-shade"></div>
+                            <p>Expense</p>
+                        </div>
+
+                        <div class="blue color">
+                            <div class="investment-graph-shade"></div>
+                            <p>Investment</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="card card-2">
+                <!-- add transaction card -->
+                <div class="card-2-title">
+                    <p>Add New Transaction</p>
+                </div>
+                <form id="transaction-data">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" placeholder="Enter transaction name" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="amount">Amount</label>
+                        <input type="text" name="amount" placeholder="Enter amount" required>
+                    </div>
+                    <div class="form-control" id="type">
+                        <div class="dropdown">
+                            <label class="type-label">Type</label>
+                            <span class="dropdown-btn type-btn">
+                                <span name="type">Select</span>
+                                <span class="arrow"></span>
+                            </span>
+                            <div class="dropdown-menu" id="type-dropdown">
+                                <a class="option">Income</a>
+                                <a class="option">Expense</a>
+                                <a class="option">Investment</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-control" id="category">
+                        <div class="dropdown ">
+                            <label class="category-label">Category</label>
+                            <span class="dropdown-btn category-btn">
+                                <span name="category">Select</span>
+                                <span class="arrow"></span>
+                            </span>
+                            <div class="dropdown-menu" id="category-dropdown">
+                                <a class="options">Food</a>
+                                <a class="options">Travel</a>
+                                <a class="options">Shopping</a>
+                                <a class="options">Grocery</a>
+                                <a class="options">Entertainment</a>
+                                <a class="options">Utilities</a>
+                                <a class="options">Other</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" placeholder="Select Date" class="date" id="transaction-date"
+                            required>
+                    </div>
+                    <button type="submit" class="btn">Add Transaction</button>
+                </form>
+            </div>
+
+            <div class="card card-3">
+                <div class="filter-type">
+                    <div class="filter-btn" id="filter-btn"></div>
+                    <span class="toggle" id="all-btn">All</span>
+                    <span class="toggle" id="income-btn">Income</span>
+                    <span class="toggle" id="expense-btn">Expense</span>
+                    <span class="toggle" id="investment-btn">Investment</span>
+                </div>
+
+                <ul class="transaction_list" id="transaction_list"></ul>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
